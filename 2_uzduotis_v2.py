@@ -12,8 +12,8 @@ ret, im = cv.threshold(img_gray, 100, 225, cv.THRESH_BINARY_INV)
 contours, hierarchy  = cv.findContours(im, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 img = cv.drawContours(white, contours, -1, (0,255,75), 5)
 
-cv.imshow("Konturas", img)
+cv.imwrite('C:/Users/Robertas/Desktop/contour_image.jpg', img)
 
-print(img)
+cv.imshow("Konturas", img)
 
 cv.waitKey(0)
